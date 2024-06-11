@@ -11,39 +11,19 @@ class GoogleReviews extends StatefulWidget {
 }
 
 class _GoogleReviewsState extends State<GoogleReviews> {
-  final String apiKey =
-      'AIzaSyDtLFeS4uf2FNy40aN-dJGgB3gnxYMzmAw'; // Replace with your API key
   final String placeId =
       'ChIJPxtyhQfL2JQR1hlJuJeaalc'; // Replace with your place ID
+
+  final String cloudFunctionUrl =
+      'https://us-central1-bagatimes.cloudfunctions.net/getReviews';
+
   final client = Client();
 
-  static Uri _buildUri(String authority, String unencondedPath,
-      [Map<String, String>? queryParameters]) {
-    if (authority.contains('3333')) {
-      return Uri.http(
-        authority,
-        unencondedPath,
-        queryParameters,
-      );
-    }
-    return Uri.https(
-      authority,
-      unencondedPath,
-      queryParameters,
-    );
-  }
-
   Future<List<dynamic>> fetchReviews() async {
-    const String corsProxy = 'https://cors-anywhere.herokuapp.com/';
-    final String url =
-        'https://maps.googleapis.com/maps/api/place/details/json?place_id=$placeId&fields=reviews&key=$apiKey';
-
-    final response = await client.get(Uri.parse('$corsProxy$url'));
-
-    print(response.statusCode);
+    final response =
+        await client.get(Uri.parse('$cloudFunctionUrl?placeId=$placeId'));
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
-      print(data);
       return data['result']['reviews'];
     } else {
       throw Exception('Failed to load reviews');
@@ -58,6 +38,7 @@ class _GoogleReviewsState extends State<GoogleReviews> {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(child: CircularProgressIndicator());
         } else if (snapshot.hasError) {
+          print(snapshot.error);
           return Center(child: Text('Error: ${snapshot.error}'));
         } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
           return const Center(child: Text('No reviews found'));

@@ -25,20 +25,21 @@ class SectionThree extends StatelessWidget {
           ),
           const Gap(50),
           Container(
-            constraints: const BoxConstraints(
-              maxWidth: 1200,
-            ),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Stack(
+              constraints: const BoxConstraints(
+                maxWidth: 1200,
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Stack(
                           children: [
-                            Image.asset('images/service_placeholder.png'),
+                            Center(
+                              child:
+                                  Image.asset('images/service_placeholder.png'),
+                            ),
                             Positioned(
                               bottom: 0,
                               right: 0,
@@ -48,37 +49,14 @@ class SectionThree extends StatelessWidget {
                             )
                           ],
                         ),
-                        const Gap(50),
-                        const Text(
-                          'DEFESA PRÉVIA',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const Gap(15),
-                        const Text(
-                          'Primeira oportunidade para oferecer a defesa no processo de suspensão, nesta fase já é possível impedir a suspensão e ter o processo arquivado.',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Stack(
+                      ),
+                      Expanded(
+                        child: Stack(
                           children: [
-                            Image.asset('images/service_placeholder.png'),
+                            Center(
+                              child:
+                                  Image.asset('images/service_placeholder.png'),
+                            ),
                             Positioned(
                               bottom: 0,
                               right: 0,
@@ -88,37 +66,14 @@ class SectionThree extends StatelessWidget {
                             )
                           ],
                         ),
-                        const Gap(50),
-                        const Text(
-                          'RECURSO À JARI',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const Gap(15),
-                        const Text(
-                          'Caso a defesa prévia não seja acatada, é possível oferecer recurso à JARI, e nesta etapa as chances de deferimento são ainda maiores.',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Stack(
+                      ),
+                      Expanded(
+                        child: Stack(
                           children: [
-                            Image.asset('images/service_placeholder.png'),
+                            Center(
+                              child:
+                                  Image.asset('images/service_placeholder.png'),
+                            ),
                             Positioned(
                               bottom: 0,
                               right: 0,
@@ -128,37 +83,14 @@ class SectionThree extends StatelessWidget {
                             )
                           ],
                         ),
-                        const Gap(50),
-                        const Text(
-                          'RECURSO AO CETRAN',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const Gap(15),
-                        const Text(
-                          'Esta é a última instância do processo administrativo, ainda mais importante a ajuda de um advogado especializado no tema.',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Stack(
+                      ),
+                      Expanded(
+                        child: Stack(
                           children: [
-                            Image.asset('images/service_placeholder.png'),
+                            Center(
+                              child:
+                                  Image.asset('images/service_placeholder.png'),
+                            ),
                             Positioned(
                               bottom: 0,
                               right: 0,
@@ -168,31 +100,126 @@ class SectionThree extends StatelessWidget {
                             )
                           ],
                         ),
-                        const Gap(50),
-                        const Text(
-                          'AÇÃO JUDICIAL',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const Gap(15),
-                        const Text(
-                          'Se todas as instâncias administrativas forem esgotadas, é possível recorrer à justiça. Uma ação judicial pode reverter a decisão e garantir seu direito de dirigir.',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
-            ),
-          ),
+                  const Gap(50),
+                  const Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Center(
+                          child: Text(
+                            'DEFESA PRÉVIA',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Center(
+                          child: Text(
+                            'RECURSO À JARI',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Center(
+                          child: Text(
+                            'RECURSO AO CETRAN',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Center(
+                          child: Text(
+                            'AÇÃO JUDICIAL',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const Gap(15),
+                  const Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Center(
+                          child: Text(
+                            'Primeira oportunidade para oferecer a defesa no processo de suspensão, nesta fase já é possível impedir a suspensão e ter o processo arquivado.',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                      Gap(25),
+                      Expanded(
+                        child: Center(
+                          child: Text(
+                            'Caso a defesa prévia não seja acatada, é possível oferecer recurso à JARI, e nesta etapa as chances de deferimento são ainda maiores.',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                      Gap(25),
+                      Expanded(
+                        child: Center(
+                          child: Text(
+                            'Esta é a última instância do processo administrativo, ainda mais importante a ajuda de um advogado especializado no tema.',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                      Gap(25),
+                      Expanded(
+                        child: Center(
+                          child: Text(
+                            'Se todas as instâncias administrativas forem esgotadas, é possível recorrer à justiça. Uma ação judicial pode reverter a decisão e garantir seu direito de dirigir.',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              )),
           const Gap(75),
           CustomButton(
             onPressed: () {},
