@@ -1,5 +1,5 @@
-import 'package:bagatimes/src/presentation/widgets/section_five.dart';
 import 'package:bagatimes/src/presentation/widgets/section_four.dart';
+import 'package:bagatimes/src/presentation/widgets/section_five.dart';
 import 'package:bagatimes/src/presentation/widgets/section_one.dart';
 import 'package:bagatimes/src/presentation/widgets/section_three.dart';
 import 'package:bagatimes/src/presentation/widgets/section_two.dart';

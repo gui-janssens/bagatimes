@@ -10,7 +10,7 @@ class SectionFive extends StatelessWidget {
   Widget build(BuildContext context) {
     return SectionComponent(
       innerPadding: 0,
-      color: Colors.white,
+      color: Colors.blue,
       child: SizedBox(
         height: 650,
         child: Row(
@@ -19,6 +19,7 @@ class SectionFive extends StatelessWidget {
               child: Image.asset(
                 'images/partners.png',
                 fit: BoxFit.cover,
+                height: 650,
               ),
             ),
             Expanded(
@@ -52,7 +53,6 @@ class SectionFive extends StatelessWidget {
                       ),
                     ),
                     CustomButton(
-                      onPressed: () {},
                       text: 'DEFENDER MINHA CNH AGORA',
                     ),
                   ],

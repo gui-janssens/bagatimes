@@ -13,10 +13,10 @@ class SectionOne extends StatelessWidget {
       asset: 'images/bg.jpeg',
       minHeight: MediaQuery.of(context).size.height,
       color: Colors.black.withOpacity(.5),
-      child: Column(
+      child: const Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          const Text(
+          Text(
             'Recebeu notificação de suspensão do direito de dirigir?',
             style: TextStyle(
               color: Colors.white,
@@ -26,8 +26,8 @@ class SectionOne extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-          const Gap(15),
-          const SizedBox(
+          Gap(15),
+          SizedBox(
             child: Text(
               'Converse com advogados especialistas e veja o que\npode ser feito para evitar a suspensão da sua CNH',
               textAlign: TextAlign.center,
@@ -38,9 +38,8 @@ class SectionOne extends StatelessWidget {
               ),
             ),
           ),
-          const Gap(50),
+          Gap(50),
           CustomButton(
-            onPressed: () {},
             text: 'QUERO CONVERSAR COM UM ADVOGADO',
           ),
         ],

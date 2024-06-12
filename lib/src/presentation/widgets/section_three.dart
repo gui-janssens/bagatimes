@@ -221,8 +221,7 @@ class SectionThree extends StatelessWidget {
                 ],
               )),
           const Gap(75),
-          CustomButton(
-            onPressed: () {},
+          const CustomButton(
             text: 'QUERO DEFENDER MEU DIREITO DE DIRIGIR',
           ),
         ],

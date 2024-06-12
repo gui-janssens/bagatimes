@@ -91,8 +91,7 @@ class SectionTwo extends StatelessWidget {
               ),
             ),
             const Gap(45),
-            CustomButton(
-              onPressed: () {},
+            const CustomButton(
               text: 'QUERO UM ORÇAMENTO',
             ),
           ],
