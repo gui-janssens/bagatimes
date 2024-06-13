@@ -1,3 +1,4 @@
+import 'package:bagatimes/src/presentation/widgets/section_seven.dart';
 import 'package:bagatimes/src/presentation/widgets/section_five.dart';
 import 'package:bagatimes/src/presentation/widgets/section_four.dart';
 import 'package:bagatimes/src/presentation/widgets/section_one.dart';
@@ -25,6 +26,7 @@ class HomePage extends StatelessWidget {
                 SectionFour(),
                 SectionFive(),
                 SectionSix(),
+                SectionSeven(),
               ],
             ),
           ),

@@ -24,21 +24,21 @@ class SectionSix extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                color: Colors.white,
+                color: AppColors.darkGrey,
                 padding: const EdgeInsets.all(80),
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
                       'Quem somos',
                       style: TextStyle(
                         fontSize: 48,
-                        color: AppColors.primary,
+                        color: Colors.white,
                         fontWeight: FontWeight.bold,
                         height: 1,
                       ),
                     ),
-                    const Expanded(
+                    Expanded(
                       child: Center(
                         child: SizedBox(
                           width: 640,
@@ -46,13 +46,14 @@ class SectionSix extends StatelessWidget {
                             'O escritório Bagatim e Sedrez Sociedade de Advogados conta com profissionais experientes em defesas contra a suspensão do direito de dirigir. Graças ao nosso serviço de atendimento online, temos ajudado inúmeros condutores em Santa Catarina a evitar a suspensão de suas CNHs.\n\nNossa missão é impactar positivamente a vida das pessoas, oferecendo serviços jurídicos personalizados e de alta qualidade, não apenas resolvendo problemas, mas também objetivando a satisfação total de nossos clientes.',
                             textAlign: TextAlign.center,
                             style: TextStyle(
+                              color: Colors.white,
                               fontSize: 18,
                             ),
                           ),
                         ),
                       ),
                     ),
-                    const CustomButton(
+                    CustomButton(
                       text: 'DEFENDER MINHA CNH AGORA',
                     ),
                   ],

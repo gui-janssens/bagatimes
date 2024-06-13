@@ -171,7 +171,7 @@ class _SectionFourState extends State<SectionFour> {
                                 Flexible(
                                   child: SingleChildScrollView(
                                     child: Text(
-                                      review['text'] * 4,
+                                      review['text'],
                                       textAlign: TextAlign.center,
                                     ),
                                   ),
