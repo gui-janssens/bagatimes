@@ -1,4 +1,5 @@
 import 'package:bagatimes/src/utils/colors.dart';
+import 'package:bagatimes/src/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -39,7 +40,7 @@ class CustomButton extends StatelessWidget {
         text,
         style: TextStyle(
           color: negativeColors ? AppColors.secondary : Colors.white,
-          fontSize: 18,
+          fontSize: fsWeb18,
           fontWeight: FontWeight.bold,
         ),
       ),

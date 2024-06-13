@@ -146,13 +146,14 @@ class _SectionFourState extends State<SectionFour> {
                                   review['author_name'],
                                   style: const TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 15,
+                                    fontSize: 14,
                                   ),
                                 ),
                                 Text(
                                   formattedDate,
                                   style: const TextStyle(
                                     color: Colors.black54,
+                                    fontSize: 14,
                                   ),
                                 ),
                                 const SizedBox(height: 8),

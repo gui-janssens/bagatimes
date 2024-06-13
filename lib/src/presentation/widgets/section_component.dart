@@ -8,13 +8,13 @@ class SectionComponent extends StatelessWidget {
   final double innerPadding;
 
   const SectionComponent({
-    super.key,
-    required this.child,
-    required this.innerPadding,
-    this.asset,
+    Key? key,
     this.color = Colors.transparent,
     this.minHeight = 0,
-  });
+    required this.child,
+    this.asset,
+    required this.innerPadding,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

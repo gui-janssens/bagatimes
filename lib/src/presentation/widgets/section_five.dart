@@ -1,7 +1,9 @@
 import 'package:bagatimes/src/presentation/widgets/section_component.dart';
 import 'package:bagatimes/src/utils/colors.dart';
+import 'package:bagatimes/src/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:sizer/sizer.dart';
 
 class FaqItem {
   String question;
@@ -44,19 +46,21 @@ class _SectionFiveState extends State<SectionFive> {
   @override
   Widget build(BuildContext context) {
     return SectionComponent(
-      innerPadding: 40,
+      innerPadding: paddingWeb40,
       color: AppColors.secondary,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             'Perguntas Frequentes',
             style: TextStyle(
-              fontSize: 24,
+              fontSize: SizerUtil.width > 900 ? 24 : 34,
               fontWeight: FontWeight.bold,
               color: Colors.white,
               height: 1,
             ),
+            textAlign:
+                SizerUtil.width > 900 ? TextAlign.start : TextAlign.center,
           ),
           const Gap(10),
           ExpansionPanelList(
@@ -97,8 +101,9 @@ class _SectionFiveState extends State<SectionFive> {
                     },
                     title: Text(
                       item.question,
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: Colors.black,
+                        fontSize: fsWeb16,
                       ),
                     ),
                   );
@@ -106,8 +111,9 @@ class _SectionFiveState extends State<SectionFive> {
                 body: ListTile(
                   title: Text(
                     item.answer,
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: Colors.black,
+                      fontSize: fsWeb16,
                     ),
                   ),
                 ),
