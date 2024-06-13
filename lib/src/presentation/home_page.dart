@@ -1,13 +1,14 @@
-import 'package:bagatimes/src/presentation/widgets/section_seven.dart';
 import 'package:bagatimes/src/presentation/widgets/section_five.dart';
 import 'package:bagatimes/src/presentation/widgets/section_four.dart';
 import 'package:bagatimes/src/presentation/widgets/section_one.dart';
+import 'package:bagatimes/src/presentation/widgets/section_seven.dart';
 import 'package:bagatimes/src/presentation/widgets/section_six.dart';
 import 'package:bagatimes/src/presentation/widgets/section_three.dart';
 import 'package:bagatimes/src/presentation/widgets/section_two.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
+  static const route = '/defesa-suspensao-cnh';
   const HomePage({super.key});
 
   @override

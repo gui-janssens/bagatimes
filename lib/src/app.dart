@@ -1,6 +1,8 @@
-import 'package:bagatimes/src/presentation/home_page.dart';
+import 'package:bagatimes/src/router.dart';
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -9,13 +11,48 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(
       builder: (context, orientation, deviceType) {
-        return MaterialApp(
+        return MaterialApp.router(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             fontFamily: 'Poppins',
             useMaterial3: false,
           ),
-          home: const HomePage(),
+          builder: (context, child) {
+            var overlay = Overlay(
+              initialEntries: [
+                OverlayEntry(
+                  builder: (context) => child!,
+                ),
+                OverlayEntry(
+                  builder: (context) => Align(
+                    alignment: Alignment.bottomRight,
+                    child: GestureDetector(
+                      onTap: () async {
+                        final uri = Uri.parse(
+                            'https://wa.me/+554799262830?text=${Uri.encodeComponent('Quero um orçamento para defender meu direito de dirigir')}');
+                        if (await canLaunchUrl(uri)) {
+                          await launchUrl(uri);
+                        } else {
+                          throw 'Could not launch $uri';
+                        }
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 25, 25),
+                        child: Image.asset(
+                          'images/wpp_business.png',
+                          height: 85,
+                          width: 85,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            );
+
+            return BotToastInit()(context, overlay);
+          },
+          routerConfig: goRouter,
         );
       },
     );
