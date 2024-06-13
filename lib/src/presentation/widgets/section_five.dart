@@ -1,66 +1,121 @@
-import 'package:bagatimes/src/presentation/widgets/custom_button.dart';
 import 'package:bagatimes/src/presentation/widgets/section_component.dart';
 import 'package:bagatimes/src/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
-class SectionFive extends StatelessWidget {
+class FaqItem {
+  String question;
+  String answer;
+  bool isExpanded;
+
+  FaqItem({
+    required this.question,
+    required this.answer,
+    this.isExpanded = false,
+  });
+}
+
+class SectionFive extends StatefulWidget {
   const SectionFive({super.key});
+
+  @override
+  State<SectionFive> createState() => _SectionFiveState();
+}
+
+class _SectionFiveState extends State<SectionFive> {
+  final List<FaqItem> _faqItems = [
+    FaqItem(
+      question: 'Qual é o maior benefício em oferecer a defesa ou recurso?',
+      answer:
+          'Com a defesa/recurso você tem chances de evitar tanto a suspensão da sua CNH quanto a necessidade de realizar o curso de reciclagem e prova teórica no Detran.',
+    ),
+    FaqItem(
+        question: 'Quais os riscos de dirigir com a CNH suspensa?',
+        answer:
+            'Ao dirigir com suspensão em sua CNH, você pode tê-la cassada. Nesse caso, você terá que ficar 2 anos sem dirigir e fazer o procedimento de reabilitação.'),
+    FaqItem(
+      question: 'Quanto tempo demora o processo?',
+      answer:
+          'Varia muito, mas em razão da alta demanda a tendência é durar meses; e enquanto durar o processo você pode continuar dirigindo normalmente',
+    ),
+    // Add more FAQ items here
+  ];
 
   @override
   Widget build(BuildContext context) {
     return SectionComponent(
-      innerPadding: 0,
-      color: Colors.blue,
-      child: SizedBox(
-        height: 650,
-        child: Row(
-          children: [
-            Expanded(
-              child: Image.asset(
-                'images/partners.png',
-                fit: BoxFit.cover,
-                height: 650,
-              ),
+      innerPadding: 40,
+      color: AppColors.secondary,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            'Perguntas Frequentes',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              height: 1,
             ),
-            Expanded(
-              child: Container(
-                color: Colors.white,
-                padding: const EdgeInsets.all(80),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Quem somos',
-                      style: TextStyle(
-                        fontSize: 48,
-                        color: AppColors.primary,
-                        fontWeight: FontWeight.bold,
-                        height: 1,
+          ),
+          const Gap(10),
+          ExpansionPanelList(
+            expansionCallback: (int index, bool isExpanded) {
+              setState(() {
+                // Update the state of the item
+                for (var element in _faqItems) {
+                  if (element.question != _faqItems[index].question) {
+                    element.isExpanded = false;
+                  }
+                }
+                _faqItems[index].isExpanded = !_faqItems[index].isExpanded;
+              });
+            },
+            dividerColor: AppColors.secondary,
+            expandIconColor: AppColors.primary,
+            animationDuration: const Duration(milliseconds: 400),
+            expandedHeaderPadding: const EdgeInsets.symmetric(
+              horizontal: 0,
+              vertical: 15,
+            ),
+            children: _faqItems.map<ExpansionPanel>((FaqItem item) {
+              return ExpansionPanel(
+                headerBuilder: (BuildContext context, bool isExpanded) {
+                  return ListTile(
+                    hoverColor: AppColors.primary.withOpacity(.1),
+                    splashColor: AppColors.primary.withOpacity(.1),
+                    onTap: () {
+                      setState(() {
+                        // Update the state of the item
+                        for (var element in _faqItems) {
+                          if (element.question != item.question) {
+                            element.isExpanded = false;
+                          }
+                        }
+                        item.isExpanded = !item.isExpanded;
+                      });
+                    },
+                    title: Text(
+                      item.question,
+                      style: const TextStyle(
+                        color: Colors.black,
                       ),
                     ),
-                    const Expanded(
-                      child: Center(
-                        child: SizedBox(
-                          width: 640,
-                          child: Text(
-                            'O escritório Bagatim e Sedrez Sociedade de Advogados conta com profissionais experientes em defesas contra a suspensão do direito de dirigir. Graças ao nosso serviço de atendimento online, temos ajudado inúmeros condutores em Santa Catarina a evitar a suspensão de suas CNHs.\n\nNossa missão é impactar positivamente a vida das pessoas, oferecendo serviços jurídicos personalizados e de alta qualidade, não apenas resolvendo problemas, mas também objetivando a satisfação total de nossos clientes.',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 18,
-                            ),
-                          ),
-                        ),
-                      ),
+                  );
+                },
+                body: ListTile(
+                  title: Text(
+                    item.answer,
+                    style: const TextStyle(
+                      color: Colors.black,
                     ),
-                    CustomButton(
-                      text: 'DEFENDER MINHA CNH AGORA',
-                    ),
-                  ],
+                  ),
                 ),
-              ),
-            )
-          ],
-        ),
+                isExpanded: item.isExpanded,
+              );
+            }).toList(),
+          ),
+        ],
       ),
     );
   }

@@ -45,7 +45,14 @@ class SectionThree extends StatelessWidget {
                               right: 0,
                               top: 0,
                               left: 0,
-                              child: Image.asset('images/wrench.png'),
+                              child: Center(
+                                child: Image.asset(
+                                  'images/shield.png',
+                                  color: Colors.white,
+                                  height: 60,
+                                  width: 60,
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -62,7 +69,14 @@ class SectionThree extends StatelessWidget {
                               right: 0,
                               top: 0,
                               left: 0,
-                              child: Image.asset('images/wrench.png'),
+                              child: Center(
+                                child: Image.asset(
+                                  'images/people.png',
+                                  color: Colors.white,
+                                  height: 60,
+                                  width: 60,
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -79,7 +93,14 @@ class SectionThree extends StatelessWidget {
                               right: 0,
                               top: 0,
                               left: 0,
-                              child: Image.asset('images/wrench.png'),
+                              child: Center(
+                                child: Image.asset(
+                                  'images/car_on_hand.png',
+                                  color: Colors.white,
+                                  height: 60,
+                                  width: 60,
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -96,7 +117,14 @@ class SectionThree extends StatelessWidget {
                               right: 0,
                               top: 0,
                               left: 0,
-                              child: Image.asset('images/wrench.png'),
+                              child: Center(
+                                child: Image.asset(
+                                  'images/martelin.png',
+                                  color: Colors.white,
+                                  height: 60,
+                                  width: 60,
+                                ),
+                              ),
                             )
                           ],
                         ),
