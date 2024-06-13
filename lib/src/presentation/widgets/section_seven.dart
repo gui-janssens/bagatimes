@@ -12,14 +12,14 @@ class SectionSeven extends StatelessWidget {
   Widget build(BuildContext context) {
     if (SizerUtil.width > 900) {
       return SectionComponent(
-        innerPadding: 20,
+        innerPadding: 35,
         color: AppColors.darkGrey,
         child: Center(
           child: Container(
             constraints: const BoxConstraints(
               maxWidth: 1200,
-              maxHeight: 400,
-              minHeight: 400,
+              maxHeight: 200,
+              minHeight: 200,
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -29,7 +29,7 @@ class SectionSeven extends StatelessWidget {
                   child: Center(
                     child: Image.asset(
                       'images/logo_no_bg.png',
-                      height: 350,
+                      height: 200,
                       fit: BoxFit.fitHeight,
                     ),
                   ),
@@ -110,10 +110,11 @@ class SectionSeven extends StatelessWidget {
             Center(
               child: Image.asset(
                 'images/logo_no_bg.png',
-                height: 350,
+                height: 150,
                 fit: BoxFit.fitHeight,
               ),
             ),
+            const Gap(30),
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,

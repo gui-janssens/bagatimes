@@ -23,30 +23,51 @@ class App extends StatelessWidget {
                 OverlayEntry(
                   builder: (context) => child!,
                 ),
-                OverlayEntry(
-                  builder: (context) => Align(
-                    alignment: Alignment.bottomRight,
-                    child: GestureDetector(
-                      onTap: () async {
-                        final uri = Uri.parse(
-                            'https://wa.me/+554799262830?text=${Uri.encodeComponent('Quero um orçamento para defender meu direito de dirigir')}');
-                        if (await canLaunchUrl(uri)) {
-                          await launchUrl(uri);
-                        } else {
-                          throw 'Could not launch $uri';
-                        }
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 0, 25, 25),
-                        child: Image.asset(
-                          'images/wpp_business.png',
-                          height: 85,
-                          width: 85,
+                if (SizerUtil.width > 900)
+                  OverlayEntry(
+                    builder: (context) => Align(
+                      alignment: Alignment.bottomRight,
+                      child: GestureDetector(
+                        onTap: () async {
+                          final uri = Uri.parse(
+                              'https://wa.me/+554799262830?text=${Uri.encodeComponent('Quero um orçamento para defender meu direito de dirigir')}');
+                          if (await canLaunchUrl(uri)) {
+                            await launchUrl(uri);
+                          } else {
+                            throw 'Could not launch $uri';
+                          }
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 0, 25, 25),
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                right: 0,
+                                bottom: 0,
+                                left: 0,
+                                top: 0,
+                                child: Center(
+                                  child: Container(
+                                    decoration: const BoxDecoration(
+                                      color: Colors.white,
+                                      shape: BoxShape.circle,
+                                    ),
+                                    height: 55,
+                                    width: 55,
+                                  ),
+                                ),
+                              ),
+                              Image.asset(
+                                'images/wpp_business.png',
+                                height: 85,
+                                width: 85,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
               ],
             );
 
