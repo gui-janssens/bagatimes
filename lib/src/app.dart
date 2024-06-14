@@ -1,5 +1,6 @@
 import 'package:bagatimes/src/router.dart';
 import 'package:bot_toast/bot_toast.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -12,6 +13,15 @@ class App extends StatelessWidget {
     return Sizer(
       builder: (context, orientation, deviceType) {
         return MaterialApp.router(
+          scrollBehavior: const MaterialScrollBehavior().copyWith(
+            overscroll: false,
+            dragDevices: {
+              PointerDeviceKind.mouse,
+              PointerDeviceKind.touch,
+              PointerDeviceKind.stylus,
+              PointerDeviceKind.unknown
+            },
+          ),
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             fontFamily: 'Poppins',
