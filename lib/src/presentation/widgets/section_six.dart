@@ -14,7 +14,6 @@ class SectionSix extends StatelessWidget {
     if (SizerUtil.width > 900) {
       return SectionComponent(
         innerPadding: 0,
-        color: Colors.blue,
         child: SizedBox(
           height: 650,
           child: Row(
@@ -32,6 +31,7 @@ class SectionSix extends StatelessWidget {
                   padding: const EdgeInsets.all(80),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         'Quem somos',
@@ -42,23 +42,19 @@ class SectionSix extends StatelessWidget {
                           height: 1,
                         ),
                       ),
-                      Expanded(
-                        child: Center(
-                          child: SizedBox(
-                            width: 640,
-                            child: Text(
-                              'O escritório Bagatim e Sedrez Sociedade de Advogados conta com profissionais experientes em defesas contra a suspensão do direito de dirigir. Graças ao nosso serviço de atendimento online, temos ajudado inúmeros condutores em Santa Catarina a evitar a suspensão de suas CNHs.\n\nNossa missão é impactar positivamente a vida das pessoas, oferecendo serviços jurídicos personalizados e de alta qualidade, não apenas resolvendo problemas, mas também objetivando a satisfação total de nossos clientes.',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: fsWeb18,
-                              ),
+                      const Gap(72),
+                      Center(
+                        child: SizedBox(
+                          width: 640,
+                          child: Text(
+                            'O escritório Bagatim e Sedrez Sociedade de Advogados conta com profissionais experientes em defesas contra a suspensão do direito de dirigir. Graças ao nosso serviço de atendimento online, temos ajudado inúmeros condutores em Santa Catarina a evitar a suspensão de suas CNHs.\n\nNossa missão é impactar positivamente a vida das pessoas, oferecendo serviços jurídicos personalizados e de alta qualidade, não apenas resolvendo problemas, mas também objetivando a satisfação total de nossos clientes.',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: fsWeb18,
                             ),
                           ),
                         ),
-                      ),
-                      const CustomButton(
-                        text: 'DEFENDER MINHA CNH AGORA',
                       ),
                     ],
                   ),
@@ -75,6 +71,9 @@ class SectionSix extends StatelessWidget {
       color: AppColors.darkGrey,
       child: Column(
         children: [
+          const Gap(25),
+          const CustomButton(text: 'DEFENDER MINHA CNH AGORA'),
+          const Gap(10),
           Container(
             color: AppColors.darkGrey,
             child: Column(
@@ -116,10 +115,6 @@ class SectionSix extends StatelessWidget {
                             ),
                           ),
                         ),
-                      ),
-                      const Gap(25),
-                      const CustomButton(
-                        text: 'DEFENDER MINHA CNH AGORA',
                       ),
                     ],
                   ),

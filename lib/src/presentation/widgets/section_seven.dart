@@ -41,53 +41,28 @@ class SectionSeven extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'BAGATIM E SEDREZ SOCIEDADE DE ADVOGADOS',
+                        'BAGATIM E SEDREZ SOCIEDADE DE ADVOGADOS | OAB/SC 7293',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: fsWeb18,
+                          fontSize: fsWeb16,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
+                      const Gap(10),
                       Text(
-                        'OAB/SC 7293',
+                        'Av. Sete de Setembro, 1377, sala 20 - Fazenda, Itajaí/SC CEP: 88301-205',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: fsWeb18,
+                          fontSize: fsWeb16,
                           fontWeight: FontWeight.w400,
                         ),
                       ),
                       const Gap(10),
                       Text(
-                        'Av. Sete de Setembro, 1377, sala 20',
+                        '(47) 9 9926-2830 | contato@bagatimesedrez.com.br',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: fsWeb18,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                      Text(
-                        'Fazenda, Itajaí/SC CEP: 88301-205',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: fsWeb18,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                      const Gap(10),
-                      Text(
-                        '(47) 9 9926-2830',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: fsWeb18,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                      const Gap(10),
-                      Text(
-                        'contato@bagatimesedrez.com.br',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: fsWeb18,
+                          fontSize: fsWeb16,
                           fontWeight: FontWeight.w400,
                         ),
                       ),
@@ -123,7 +98,7 @@ class SectionSeven extends StatelessWidget {
                   'BAGATIM E SEDREZ SOCIEDADE DE ADVOGADOS',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: fsWeb18,
+                    fontSize: fsWeb16,
                     fontWeight: FontWeight.w600,
                   ),
                   textAlign: TextAlign.center,
@@ -132,7 +107,7 @@ class SectionSeven extends StatelessWidget {
                   'OAB/SC 7293',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: fsWeb18,
+                    fontSize: fsWeb16,
                     fontWeight: FontWeight.w400,
                   ),
                   textAlign: TextAlign.center,
@@ -142,7 +117,7 @@ class SectionSeven extends StatelessWidget {
                   'Av. Sete de Setembro, 1377, sala 20',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: fsWeb18,
+                    fontSize: fsWeb16,
                     fontWeight: FontWeight.w400,
                   ),
                   textAlign: TextAlign.center,
@@ -151,7 +126,7 @@ class SectionSeven extends StatelessWidget {
                   'Fazenda, Itajaí/SC CEP: 88301-205',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: fsWeb18,
+                    fontSize: fsWeb16,
                     fontWeight: FontWeight.w400,
                   ),
                   textAlign: TextAlign.center,
@@ -161,7 +136,7 @@ class SectionSeven extends StatelessWidget {
                   '(47) 9 9926-2830',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: fsWeb18,
+                    fontSize: fsWeb16,
                     fontWeight: FontWeight.w400,
                   ),
                   textAlign: TextAlign.center,
@@ -171,7 +146,7 @@ class SectionSeven extends StatelessWidget {
                   'contato@bagatimesedrez.com.br',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: fsWeb18,
+                    fontSize: fsWeb16,
                     fontWeight: FontWeight.w400,
                   ),
                   textAlign: TextAlign.center,

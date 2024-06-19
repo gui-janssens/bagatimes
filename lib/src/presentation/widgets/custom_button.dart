@@ -1,11 +1,12 @@
 import 'package:bagatimes/src/utils/colors.dart';
-import 'package:bagatimes/src/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
   final bool negativeColors;
+
   const CustomButton({
     super.key,
     required this.text,
@@ -27,11 +28,12 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: _launchWhatsApp,
       style: ElevatedButton.styleFrom(
-        backgroundColor: negativeColors ? Colors.white : AppColors.secondary,
+        backgroundColor:
+            negativeColors ? AppColors.darkGrey : AppColors.secondary,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
-        minimumSize: const Size(190, 72),
+        minimumSize: Size(190, SizerUtil.width > 900 ? 72 : 52),
         elevation: 2, // Adjust elevation to control the size of the shadow
       ).copyWith(
           overlayColor:
@@ -39,10 +41,11 @@ class CustomButton extends StatelessWidget {
       child: Text(
         text,
         style: TextStyle(
-          color: negativeColors ? AppColors.secondary : Colors.white,
-          fontSize: fsWeb18,
+          color: Colors.white,
+          fontSize: SizerUtil.width > 900 ? 18 : 14,
           fontWeight: FontWeight.bold,
         ),
+        textAlign: TextAlign.center,
       ),
     );
   }

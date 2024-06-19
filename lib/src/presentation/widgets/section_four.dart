@@ -116,7 +116,8 @@ class _SectionFourState extends State<SectionFour> {
                         final review = snapshot.data![index];
 
                         final DateTime date =
-                            DateTime.fromMillisecondsSinceEpoch(review['time']);
+                            DateTime.fromMillisecondsSinceEpoch(
+                                review['time'] * 1000);
                         final formattedDate =
                             DateFormat('dd/MM/yyyy').format(date);
                         return Container(

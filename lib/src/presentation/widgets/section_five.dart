@@ -1,3 +1,4 @@
+import 'package:bagatimes/src/presentation/widgets/custom_button.dart';
 import 'package:bagatimes/src/presentation/widgets/section_component.dart';
 import 'package:bagatimes/src/utils/colors.dart';
 import 'package:bagatimes/src/utils/constants.dart';
@@ -121,6 +122,15 @@ class _SectionFiveState extends State<SectionFive> {
               );
             }).toList(),
           ),
+          if (SizerUtil.width > 900) ...[
+            const Gap(40),
+            const Center(
+              child: CustomButton(
+                text: 'DEFENDER MINHA CNH AGORA',
+                negativeColors: true,
+              ),
+            ),
+          ],
         ],
       ),
     );
