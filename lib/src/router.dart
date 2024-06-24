@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 final goRouter = GoRouter(
-  initialLocation: '/',
   navigatorKey: GlobalKey<NavigatorState>(),
   redirect: (_, state) async {
     return HomePage.route;
