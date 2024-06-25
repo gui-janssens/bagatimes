@@ -1,5 +1,6 @@
 import 'package:bagatimes/src/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:google_tag_manager/google_tag_manager.dart' as gtm;
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -26,7 +27,17 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: _launchWhatsApp,
+      onPressed: () {
+        try {
+          gtm.pushEvent(
+            'gtm.linkClick',
+            data: {
+              'Click ID': 'orcamento',
+            },
+          );
+        } catch (_) {}
+        _launchWhatsApp();
+      },
       style: ElevatedButton.styleFrom(
         backgroundColor:
             negativeColors ? AppColors.darkGrey : AppColors.secondary,
