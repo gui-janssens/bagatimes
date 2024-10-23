@@ -47,8 +47,7 @@ class CustomButton extends StatelessWidget {
         minimumSize: Size(190, SizerUtil.width > 900 ? 72 : 52),
         elevation: 2, // Adjust elevation to control the size of the shadow
       ).copyWith(
-          overlayColor:
-              MaterialStateProperty.all(Colors.black.withOpacity(.1))),
+          overlayColor: WidgetStateProperty.all(Colors.black.withOpacity(.1))),
       child: Text(
         text,
         style: TextStyle(

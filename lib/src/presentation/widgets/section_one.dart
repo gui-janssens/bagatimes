@@ -3,7 +3,6 @@ import 'package:bagatimes/src/presentation/widgets/section_component.dart';
 import 'package:bagatimes/src/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:sizer/sizer.dart';
 
 class SectionOne extends StatelessWidget {
   const SectionOne({super.key});
@@ -31,7 +30,7 @@ class SectionOne extends StatelessWidget {
           const Gap(15),
           SizedBox(
             child: Text(
-              'Converse com advogados especialistas e veja o que${SizerUtil.width > 900 ? '\n' : ' '}pode ser feito para evitar a suspensão da sua CNH',
+              'Recorra com advogados especialistas e continue dirigindo',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: fsWeb24,
@@ -42,7 +41,7 @@ class SectionOne extends StatelessWidget {
           ),
           const Gap(50),
           const CustomButton(
-            text: 'QUERO CONVERSAR COM UM ADVOGADO',
+            text: 'QUERO RECORRER',
           ),
         ],
       ),
