@@ -199,7 +199,7 @@ class SectionThree extends StatelessWidget {
                         Expanded(
                           child: Center(
                             child: Text(
-                              'Primeira oportunidade para oferecer a defesa no processo de suspensão, nesta fase já é possível impedir a suspensão e ter o processo arquivado.',
+                              'Primeira oportunidade para oferecer a defesa administrativa no processo  de suspensão, nesta fase já é possível impedir a suspensão e ter o processo arquivado.',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: fsWeb16,
@@ -315,7 +315,7 @@ class SectionThree extends StatelessWidget {
               const Gap(15),
               Center(
                 child: Text(
-                  'Primeira oportunidade para oferecer a defesa no processo de suspensão, nesta fase já é possível impedir a suspensão e ter o processo arquivado.',
+                  'Primeira oportunidade para oferecer a defesa administrativa no processo  de suspensão, nesta fase já é possível impedir a suspensão e ter o processo arquivado.',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: fsWeb16,

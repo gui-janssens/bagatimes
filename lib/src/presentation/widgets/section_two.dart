@@ -67,7 +67,7 @@ class SectionTwo extends StatelessWidget {
                             ),
                             const Gap(20),
                             Text(
-                              'A defesa do direito de dirigir é crucial para quem não pode ficar sem dirigir. Com uma boa defesa elaborada por advogados experientes, você pode evitar a suspensão da sua carteira de motorista e continuar dirigindo normalmente durante o processo.',
+                              'A defesa contra suspensão da CNH é crucial para quem não pode ficar sem dirigir. Com uma boa defesa elaborada por advogados experientes, você pode evitar a suspensão da sua carteira de motorista e continuar dirigindo normalmente durante o processo.',
                               textAlign: TextAlign.start,
                               style: TextStyle(
                                 fontSize: fsWeb18,
@@ -151,7 +151,7 @@ class SectionTwo extends StatelessWidget {
                           ),
                           const Gap(20),
                           Text(
-                            'A defesa do direito de dirigir é crucial para quem não pode ficar sem dirigir. Com uma boa defesa elaborada por advogados experientes, você pode evitar a suspensão da sua carteira de motorista e continuar dirigindo normalmente durante o processo.',
+                            'A defesa contra suspensão da CNH é crucial para quem não pode ficar sem dirigir. Com uma boa defesa elaborada por advogados experientes, você pode evitar a suspensão da sua carteira de motorista e continuar dirigindo normalmente durante o processo.',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: fsWeb18,

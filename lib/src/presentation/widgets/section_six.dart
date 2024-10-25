@@ -47,7 +47,7 @@ class SectionSix extends StatelessWidget {
                         child: SizedBox(
                           width: 640,
                           child: Text(
-                            'O escritório Bagatim e Sedrez Sociedade de Advogados conta com profissionais experientes em defesas contra a suspensão do direito de dirigir. Graças ao nosso serviço de atendimento online, temos ajudado inúmeros condutores em Santa Catarina a evitar a suspensão de suas CNHs.\n\nNossa missão é impactar positivamente a vida das pessoas, oferecendo serviços jurídicos personalizados e de alta qualidade, não apenas resolvendo problemas, mas também objetivando a satisfação total de nossos clientes.',
+                            'O escritório Bagatim e Sedrez Sociedade de Advogados conta com profissionais experientes em defesas contra a suspensão do direito de dirigir. Graças ao nosso serviço de atendimento online, temos ajudado inúmeros condutores a evitar a suspensão de suas habilitações em processos instaurados pelo Detran de Santa Catarina.\n\nNossa missão é impactar positivamente a vida das pessoas, oferecendo serviços jurídicos personalizados e de alta qualidade, não apenas resolvendo problemas, mas também objetivando a satisfação total de nossos clientes.',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
@@ -107,7 +107,7 @@ class SectionSix extends StatelessWidget {
                       Center(
                         child: SizedBox(
                           child: Text(
-                            'O escritório Bagatim e Sedrez Sociedade de Advogados conta com profissionais experientes em defesas contra a suspensão do direito de dirigir. Graças ao nosso serviço de atendimento online, temos ajudado inúmeros condutores em Santa Catarina a evitar a suspensão de suas CNHs.\n\nNossa missão é impactar positivamente a vida das pessoas, oferecendo serviços jurídicos personalizados e de alta qualidade, não apenas resolvendo problemas, mas também objetivando a satisfação total de nossos clientes.',
+                            'O escritório Bagatim e Sedrez Sociedade de Advogados conta com profissionais experientes em defesas contra a suspensão do direito de dirigir. Graças ao nosso serviço de atendimento online, temos ajudado inúmeros condutores a evitar a suspensão de suas habilitações em processos instaurados pelo Detran de Santa Catarina.\n\nNossa missão é impactar positivamente a vida das pessoas, oferecendo serviços jurídicos personalizados e de alta qualidade, não apenas resolvendo problemas, mas também objetivando a satisfação total de nossos clientes.',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
