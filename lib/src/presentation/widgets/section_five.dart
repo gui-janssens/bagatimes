@@ -33,15 +33,31 @@ class _SectionFiveState extends State<SectionFive> {
           'Com a defesa/recurso você tem chances de evitar tanto a suspensão da sua CNH quanto a necessidade de realizar o curso de reciclagem e prova teórica no Detran.',
     ),
     FaqItem(
-        question: 'Quais os riscos de dirigir com a CNH suspensa?',
-        answer:
-            'Ao dirigir com suspensão em sua CNH, você pode tê-la cassada. Nesse caso, você terá que ficar 2 anos sem dirigir e fazer o procedimento de reabilitação.'),
+      question: 'Quais os riscos de dirigir com a CNH suspensa?',
+      answer:
+          'Ao dirigir com suspensão em sua CNH, você pode tê-la cassada. Nesse caso, você terá que ficar 2 anos sem dirigir e fazer o procedimento de reabilitação.',
+    ),
     FaqItem(
       question: 'Quanto tempo demora o processo?',
       answer:
           'Varia muito, mas em razão da alta demanda a tendência é durar meses; e enquanto durar o processo você pode continuar dirigindo normalmente',
     ),
-    // Add more FAQ items here
+    FaqItem(
+      question: 'A suspensão do direito de dirigir é automática?',
+      answer:
+          'Não, a CNH só será suspensa se o condutor não oferecer a defesa ou a defesa não for aceita. Não existe suspensão direta da CNH.',
+    ),
+    FaqItem(
+      question:
+          'Como ocorre a notificação do processo de suspensão do direito de dirigir?',
+      answer:
+          'A notificação pode ocorrer por carta, por e-mail e pode haver ainda a publicação no diário oficial caso o seu endereço esteja desatualizado no Detran e a carta não tenha sido entregue no seu endereço.',
+    ),
+    FaqItem(
+      question: 'Não recebi notificação do processo de suspensão, o que fazer',
+      answer:
+          'Você pode ir até o Detran solicitar o protocolo e senha do seu processo ou entre em contato que nós podemos te auxiliar a acessá-lo.',
+    ),
   ];
 
   @override
