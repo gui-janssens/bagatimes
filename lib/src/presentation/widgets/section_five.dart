@@ -54,7 +54,7 @@ class _SectionFiveState extends State<SectionFive> {
           'A notificação pode ocorrer por carta, por e-mail e pode haver ainda a publicação no diário oficial caso o seu endereço esteja desatualizado no Detran e a carta não tenha sido entregue no seu endereço.',
     ),
     FaqItem(
-      question: 'Não recebi notificação do processo de suspensão, o que fazer',
+      question: 'Não recebi notificação do processo de suspensão, o que fazer?',
       answer:
           'Você pode ir até o Detran solicitar o protocolo e senha do seu processo ou entre em contato que nós podemos te auxiliar a acessá-lo.',
     ),
